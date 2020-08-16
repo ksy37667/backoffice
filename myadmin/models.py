@@ -52,6 +52,10 @@ class Employees(models.Model):
     class Meta:
         managed = False
         db_table = 'employees'
+        verbose_name = '직원명단'
+
+    def __str__(self):
+        return self.first_name +' '+ self.last_name
 
 
 class Salaries(models.Model):
